@@ -17,7 +17,7 @@ while cap.isOpened():
         if cv2.contourArea(countour) < 700:
             continue
         cv2.rectangle(frame1, (x, y), (x+w, y+h), (0, 255, 0), 2)
-        cv2.putText(frame1, "Status: {}".format('Movement'), (10, 20), cv2.FONT_HERSHEY_SCRIPT_SIMPLEX, 1, (0, 0, 255), 3)
+        cv2.putText(frame1, "Status: {}".format('motion Detected'), (10, 20), cv2.FONT_HERSHEY_SCRIPT_SIMPLEX, 1, (0, 0, 255), 3)
     #cv2.drawContours(frame1, countours, -1, (0, 255, 0), 2)
     cv2.imshow("feed", frame1)
     frame1 = frame2
